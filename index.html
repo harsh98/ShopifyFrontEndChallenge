@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+</head>
+<body>
+	<div>
+		<h1>Stay up to date with ecommerce trends with Shopify's newsletter</h1>
+		<hr align="left">
+		<br>
+		<br>
+		<h3>Subscribe for free marketing tips</h3>
+		<form method="POST">
+			<input type="email" name="emailField" required="" id="email" placeholder="Email Address">
+			<span>&nbsp</span>
+			<select>
+				<option selected disabled>
+					Interested in...
+				</option>
+				<option>
+					Art
+				</option>
+				<option>
+					Automotive
+				</option>
+				<option>
+					Books
+				</option>
+				<option>
+					Business and Industrial
+				</option>
+				<option>
+					Camera and Photo
+				</option>
+				<option>
+					Clothing, Shoes & Accessories
+				</option>
+				<option>
+					Electronics
+				</option>
+				<option>
+					Home & Garden
+				</option>
+				<option>
+					Jewellery
+				</option>
+				<option>
+					Music
+				</option>
+				<option>
+					Pet Supplies
+				</option>
+				<option>
+					Sporting Goods
+				</option>
+				<option>
+					Toys and Hoobies
+				</option>
+				<option>
+					Other
+				</option>
+			</select>
+			<br>
+			<span class="noerror" id="errorMsg">Please enter a valid email address</span>
+			<br>
+			<br>
+			<input class="button" type="button" name="submitBtn" value="Sign up now" onclick="validate()">
+		</form>
+		<a href="" align="center">Unsubscribe</a>
+	</div>
+	<style type="text/css">
+		.noerror {
+			display:  none;
+		}
+		div {
+			display: block;
+		    padding-top: 3%;
+		    margin: 1em auto;
+		    width: 750px;
+		}
+		body {
+			background-color: #000639;
+			font-family: Helvetica;
+		}
+		h1 {
+			color: #FFFFFF;
+			font-size: 24px;
+		}
+		h3{
+			color: #FFFFFF;
+			font-size: 16px;
+			font-weight: normal;
+		}
+		hr {
+			width: 3%;
+			border: 1px solid #7AB55C;
+
+		}
+		input, select {
+			border-radius: 6px;
+			font-size: 16px;
+			padding: 15px 32px;
+			color: #7B7B7B;
+		}
+		#errorMsg {
+			color: #C23628;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.button {
+			font-size: 16px;
+			width: 65%;
+			background-color: #5c6ac4;
+			color: #FFFFFF;
+			border-color: #5c6ac4;
+			font-weight: bold;
+		}
+		a{
+			font-style: underline;
+			color: #FFFFFF;
+			font-size: 12px;
+			display: block;
+			text-align: center;
+			padding-top: 230px;
+		}
+
+	</style>
+	<script type="text/javascript">
+		function validate (){
+			let entry = document.getElementById ("email").value;
+			let temp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			if (temp.test(entry)) {
+				console.log(entry);
+				document.getElementById ("errorMsg").className = "noerror"
+			} else {
+				document.getElementById ("errorMsg").className = "error"
+			}
+		}
+	</script>
+</body>
+</html>
